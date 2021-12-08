@@ -94,6 +94,31 @@
             stroke: #000;
             stroke-miterlimit: 10;
         }
+
+        .loading__text {
+            position: fixed;
+            bottom: 15vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+            height: auto;
+        }
+
+        .loading__text p:first-of-type {
+            margin: auto;
+            text-align: center;
+            color: white;
+            font-weight: bolder;
+            font-size: 1.2em;
+        }
+
+        .loading__text p:last-of-type {
+            margin: auto;
+            text-align: center;
+            color: white;
+            font-size: 11px;
+            margin-top: 1vh;
+        }
     </style>
 
 
@@ -162,21 +187,26 @@
             </div>
         </div>
     </div>
+    <div class="loading__text">
+        <p>只今ページを読み込んでおります。</p>
+        <p>現在お申し込みが殺到し、アクセスが集中していることからページの表示まで10秒ほどお時間をいただく場合がございます。</p>
+    </div>
+
     <!-- RING -->
     <!-- <div class="ring">
         Drstick
         <span></span>
     </div> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.2/vivus.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
     <script>
 
 
         var animate = new Vivus('text', {
-            type: 'oneByOne',
-            duration: 500,
+            type: 'delayed',
+            duration: 200,
             animTimingFunction: Vivus.EASE_OUT,
-            start: 'autostart'
+            start: 'autostart',
         });
     </script>
 </body>
