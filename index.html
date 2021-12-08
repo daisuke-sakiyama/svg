@@ -39,8 +39,8 @@
         /* ALTERNATING ORBITS */
 
         .circle-border {
-            width: 30vmax;
-            height: 30vmax;
+            width: 35vmax;
+            height: 35vmax;
             padding: 3px;
             display: flex;
             justify-content: center;
@@ -72,6 +72,20 @@
             transform: translate(-50%, -50%);
             color: white;
             z-index: 1;
+        }
+
+        #mask .st0 {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 90;
+            /*線の太さを指定する*/
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+            stroke-dasharray: 1500;
+            /* 線の間隔を指定する */
+            stroke-dashoffset: 1500;
+            /* 線の位置を指定する */
         }
     </style>
 
