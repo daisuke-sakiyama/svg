@@ -87,6 +87,13 @@
             stroke-dashoffset: 1500;
             /* 線の位置を指定する */
         }
+
+
+        .cls-1 {
+            fill: none;
+            stroke: #000;
+            stroke-miterlimit: 10;
+        }
     </style>
 
 
@@ -98,7 +105,7 @@
     <div class="loading">
         <div class="spinner-box">
             <div class="inner">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                <svg id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 292.73 35.2" style="height: 27px; width: auto;">
                     <defs>
                         <style>
@@ -160,7 +167,18 @@
         Drstick
         <span></span>
     </div> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.2/vivus.js"></script>
+    <script>
 
+
+        var animate = new Vivus('text', {
+            type: 'oneByOne',
+            duration: 500,
+            animTimingFunction: Vivus.EASE_OUT,
+            start: 'autostart'
+        });
+    </script>
 </body>
 
 </html>
